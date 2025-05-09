@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --main-title: #0A2540;
+    --btn-color : #8E55FF;
+    --des-color: #435366;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,9 +13,101 @@
 }
 
 body{
-    /* font-family: "Figtree", sans-serif; */
+    font-family: "Figtree", sans-serif;
     /* font-family: "Noto Sans", sans-serif; */
 }
+
+.main-wrapper{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.main-section{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5rem;
+}
+
+.left-div h1{
+    font-size: 3rem;
+    margin-top: 0.6rem;
+    color: var(--hero-title);
+}
+
+.hero-label{
+    font-size: 1.5rem;
+    color: var(--main-title);
+}
+
+.hero-des{
+    font-size: 1rem;
+    margin-top: 2rem;
+    color: var(--des-color);
+    font-family: "Noto Sans", sans-serif !important;
+
+}
+
+.btn-div{
+    margin-top: 1.5rem;
+}
+
+.btn{
+    border-radius: 10rem;
+    font-size: 0.9rem;
+    background-color: red;
+    padding: 0.4rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-fill{
+    background-color: var(--btn-color);
+    color: white;
+}
+
+.btn-normal{
+    background-color: transparent;
+    color: var(--btn-color);
+}
+
+/* Right section */
+.right-div {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1.7fr 1.2fr;
+    gap: 20px;
+    overflow: hidden;
+    height: 600px;
+  }
+  
+  .image-column {
+    overflow: hidden;
+    height: 600px;
+    position: relative;
+  }
+  
+  .image-scroller {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: none;
+  }
+  
+  .image-scroller img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  } 
 
 /* ------------------------------MEDIAS---------------------------- */
 /* Using rem for breakpoints to support scalability and user accessibility preferences */
