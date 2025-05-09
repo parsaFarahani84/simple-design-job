@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* font-family: "Figtree", sans-serif; */
+    /* font-family: "Noto Sans", sans-serif; */
+}
+
+/* ------------------------------MEDIAS---------------------------- */
+/* Using rem for breakpoints to support scalability and user accessibility preferences */
+
+/* Mobile: 1px to 600px */
+@media (max-width: 37.5rem) {
+
+}
+
+/* Tablet: 601px to 900px */
+@media (min-width: 37.563rem) and (max-width: 56.25rem) {
+  
+}
+
+/* Desktop: 901px to 1080px */
+@media (min-width: 56.313rem) and (max-width: 67.5rem) {
+   
+}
+/* ------------------------------MEDIAS---------------------------- */
+  
