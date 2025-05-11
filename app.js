@@ -1,5 +1,6 @@
-function makeInfiniteScroll(containerSelector, speed = 0.5) {
-    const container = document.querySelector(containerSelector);
+const columns = document.querySelectorAll('.image-column');
+
+function makeInfiniteScroll(container, speed = 0.5) {
     const scroller = container.querySelector('.image-scroller');
   
     // Duplicate images
@@ -19,6 +20,7 @@ function makeInfiniteScroll(containerSelector, speed = 0.5) {
     animate();
   }
   
-  makeInfiniteScroll('.image-column:nth-child(1)', 0.3); // left column (downward)
-  makeInfiniteScroll('.image-column.reverse', 0.3);       // right column (upward)
+  
+  makeInfiniteScroll(columns[0], 0.3);
+  makeInfiniteScroll(columns[1], 0.3);
   

@@ -33,7 +33,7 @@ body {
     display: flex;
     align-items: center;
     margin: auto;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -60,7 +60,7 @@ body {
 }
 
 .hero-label {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--main-title);
 }
 
@@ -178,25 +178,34 @@ body {
 }
 
 .oblique-gradient {
-    width: 1736px;
-    height: 350px;
+    width: 120vw;
+    max-width: none;
+    overflow-x: hidden;
+    height: 200px;
     background: linear-gradient(to right, #7F55B1, #9B7EBD, #F49BAB, #FFE1E0 );
-    clip-path: polygon(0 50%, 100% 0, 100% 50%, 0 100%);
-    width: 1736px;
+    rotate: -11deg;
     position: absolute;
-    bottom: -10rem;
-    left: 0;
+    bottom: -12rem;
+    left: -2rem;
+    z-index: 1;
   }
   
+  
+
+  .mobile-image{
+    display: none;
+  }
 
 /* --------------------------- MEDIA QUERIES ---------------------------- */
 
 /* Mobile: 1px to 600px */
 @media (max-width: 37.5rem) {
+
     .main-wrapper {
         width: 95%;
         height: auto;
         padding: 2rem 1rem;
+        overflow: hidden;
     }
 
     .main-section {
@@ -239,8 +248,15 @@ body {
     }
 
     .image-column {
-        height: auto;
-    }
+        display: none;
+      }
+    
+    .mobile-image {
+        display: block;
+        z-index: 30;
+        border-radius: 0.5rem;
+
+      }
 
     .image-scroller {
         flex-direction: column;
@@ -255,6 +271,11 @@ body {
     .image-scroller img:not(:first-child) {
         display: none;
     }
+    .oblique-gradient {
+        width: 110vw;
+        left: -5vw;
+        bottom: -10rem;
+      }
 }
 
 /* Tablet: 601px to 900px */
@@ -263,7 +284,8 @@ body {
         width: 100vw;
         margin: 0;
         padding: 0;
-        overflow-x: auto;
+        overflow: hidden;
+
     }
 
     .main-section {
@@ -278,11 +300,13 @@ body {
     }
 
     .right-div {
-        min-width: 50vw;
+        position: relative;
+       
     }
 
     .image-column {
         height: auto;
+
     }
 
     .image-scroller {
@@ -292,6 +316,8 @@ body {
     .image-scroller img {
         width: 100%;
     }
+
+ 
 }
 
 /* Desktop: 901px to 1080px */
@@ -301,10 +327,27 @@ body {
     }
 
     .left-div {
-        padding-left: 2rem;
+        padding-left: 1rem;
     }
 
     .left-div h1 {
         font-size: 2.5rem;
+    }
+}
+
+
+@media (min-width: 67.5rem) {
+
+    /* .left-div h1 {
+        font-size: 2.5rem;
+    } */
+
+    /* .hero-label {
+        font-size: 1.5rem;
+        color: var(--main-title);
+    } */
+
+    .left-div {
+        padding-left: 1rem;
     }
 }
