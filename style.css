@@ -52,6 +52,7 @@
      gap: 4rem;
      grid-template-columns: 1fr 1fr;
      height: 100vh;
+     overflow-y: hidden;
    }
    
    /* ==========================================================================
@@ -195,7 +196,7 @@
      overflow: hidden;
      object-fit: cover;
    }
-   
+
    .mobile-image {
      display: none;
    }
@@ -234,20 +235,9 @@
        font-size: 0.95rem;
      }
    
-        .btn{
+      .btn {
             font-size: 1.1rem;
-        }
-
-     /* .btn {
-       width: 100%;
-       margin-bottom: 1rem;
      }
-   
-     .btn-div {
-       display: flex;
-       flex-direction: column;
-       gap: 0.5rem;
-     } */
    
      .right-div {
        display: flex;
